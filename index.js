@@ -56,5 +56,15 @@ let routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashDog
 
 
 function exerciseDog(dogName, dogBreed) {
-    return routine.map(fn => fn(dogName, dogBreed));
+    // return routine.map(fn => fn(dogName, dogBreed));
+// }
+
+$.each(routine, function(dogName, dogBreed) {
+    wakeDog(); // run your function
+    leashDog();
+    walkToPark();
+    throwFrisbee();
+    walkHome();
+    unleashDog();
+});
 }
